@@ -138,7 +138,7 @@ void HandleUser()
 
         case STUDENT:
 
-            handle_student();
+            handle_student(user.user_id);
 
             break;
 

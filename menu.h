@@ -1,12 +1,16 @@
 #include "stdio.h"
 #include "string.h"
-// #include "authentication.h"
 #include "student_management.h"
 #include "instructure_management.h"
 #include "course_management.h"
+#include "register_course.h"
 
-void handle_student()
+void handle_student(char *student_id)
 {
+    readCourses();
+    char file_name[150];
+    snprintf(file_name, sizeof(file_name), "C:\\Users\\parsa\\Desktop\\Data\\%s.txt", student_id);
+    add_course_to_syllabus(file_name);
 }
 
 void handle_instructor()

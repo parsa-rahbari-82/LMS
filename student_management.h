@@ -1,6 +1,5 @@
 #include "stdio.h"
 #include "string.h"
-// #include "authentication.h"
 
 const char *STUDENTS_FILE_NAME = "C:\\Users\\parsa\\Desktop\\Data\\students.txt";
 typedef struct
@@ -79,9 +78,6 @@ void delete_student_data(char STUDENT_ID[10], char *STUDENTS_FILE_NAME)
     char file_name[150];
     snprintf(file_name, sizeof(file_name), "C:\\Users\\parsa\\Desktop\\Data\\%s.txt", STUDENT_ID);
     remove(file_name);
-
-    // remove student username and pass
-    // delete_user_profile(username);
 }
 
 void create_student_course_file(char student_id[10])
