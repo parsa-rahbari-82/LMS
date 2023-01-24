@@ -126,6 +126,11 @@ void add_course_to_syllabus(char *userFile)
                     return;
                 }
 
+                else if ((cred + current_cred) < 14)
+                {
+                    puts("Your total credit is lower than 14 please take more courses!");
+                }
+
                 fprintf(student_fp, "%s,%s,%s", p1, p2, p3);
             }
         }
